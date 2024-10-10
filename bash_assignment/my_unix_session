@@ -1,0 +1,792 @@
+Script started on 2024-10-10 12:25:03+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="124" LINES="31"]
+[?2004h]0;rakeshsta@TIGER05142: ~[01;32mrakeshsta@TIGER05142[00m:[01;34m~[00m$ tree .
+[?2004l[01;34m.[0m
+└── [01;34mtamlep-rs[0m
+    ├── README.md
+    └── [01;34mbash_assignment[0m
+        ├── [01;34mdata[0m
+        └── my_unix_session
+
+4 directories, 2 files
+[?2004h]0;rakeshsta@TIGER05142: ~[01;32mrakeshsta@TIGER05142[00m:[01;34m~[00m$ cd tamlep-rs/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs[00m$ cd bash_assignment/daa[Kta
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data[00m$ [7mcurl -o shell-lesson-data.zip https://swcarpentry.github.io/shell-nov[27m[7mi[27m[7mce/data/shell-lesson-data.zip[27m[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data[00m$ curl -o shell-lesson-data.zip https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip
+[?2004l  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0  449k    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  449k  100  449k    0     0  1216k      0 --:--:-- --:--:-- --:--:-- 1214k
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data[00m$ ls
+[?2004l[0m[01;31mshell-lesson-data.zip[0m
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data[00m$ unzip a[Kshell-lesson-data.zip [K
+[?2004lArchive:  shell-lesson-data.zip
+   creating: shell-lesson-data/
+   creating: shell-lesson-data/north-pacific-gyre/
+   creating: shell-lesson-data/exercise-data/
+   creating: shell-lesson-data/exercise-data/writing/
+  inflating: shell-lesson-data/exercise-data/writing/LittleWomen.txt  
+  inflating: shell-lesson-data/exercise-data/writing/haiku.txt  
+   creating: shell-lesson-data/exercise-data/creatures/
+  inflating: shell-lesson-data/exercise-data/creatures/basilisk.dat  
+  inflating: shell-lesson-data/exercise-data/creatures/unicorn.dat  
+  inflating: shell-lesson-data/exercise-data/creatures/minotaur.dat  
+   creating: shell-lesson-data/exercise-data/animal-counts/
+  inflating: shell-lesson-data/exercise-data/animal-counts/animals.csv  
+ extracting: shell-lesson-data/exercise-data/numbers.txt  
+  inflating: shell-lesson-data/north-pacific-gyre/NENE01978B.txt  
+  inflating: shell-lesson-data/north-pacific-gyre/NENE02018B.txt  
+  inflating: shell-lesson-data/north-pacific-gyre/NENE01736A.txt  
+  inflating: shell-lesson-data/north-pacific-gyre/NENE01751A.txt  
+  inflating: shell-lesson-data/north-pacific-gyre/NENE02043B.txt  
+  inflating: shell-lesson-data/north-pacific-gyre/NENE02040B.txt  
+  inflating: shell-lesson-data/north-pacific-gyre/NENE01751B.txt  
+  inflating: shell-lesson-data/north-pacific-gyre/NENE02040Z.txt  
+  inflating: shell-lesson-data/north-pacific-gyre/NENE01971Z.txt  
+  inflating: shell-lesson-data/north-pacific-gyre/NENE01812A.txt  
+  inflating: shell-lesson-data/north-pacific-gyre/NENE01729A.txt  
+  inflating: shell-lesson-data/north-pacific-gyre/NENE02043A.txt  
+  inflating: shell-lesson-data/north-pacific-gyre/NENE01729B.txt  
+  inflating: shell-lesson-data/north-pacific-gyre/NENE01843A.txt  
+  inflating: shell-lesson-data/north-pacific-gyre/NENE02040A.txt  
+  inflating: shell-lesson-data/north-pacific-gyre/NENE01978A.txt  
+  inflating: shell-lesson-data/north-pacific-gyre/goodiff.sh  
+  inflating: shell-lesson-data/north-pacific-gyre/goostats.sh  
+  inflating: shell-lesson-data/north-pacific-gyre/NENE01843B.txt  
+   creating: shell-lesson-data/exercise-data/alkanes/
+  inflating: shell-lesson-data/exercise-data/alkanes/methane.pdb  
+  inflating: shell-lesson-data/exercise-data/alkanes/propane.pdb  
+  inflating: shell-lesson-data/exercise-data/alkanes/ethane.pdb  
+  inflating: shell-lesson-data/exercise-data/alkanes/pentane.pdb  
+  inflating: shell-lesson-data/exercise-data/alkanes/octane.pdb  
+  inflating: shell-lesson-data/exercise-data/alkanes/cubane.pdb  
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data[00m$ ls
+[?2004l[0m[01;34mshell-lesson-data[0m  [01;31mshell-lesson-data.zip[0m
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data[00m$ cs [K[Kd ..
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment[00m$ ls
+[?2004l[0m[01;34mdata[0m  my_unix_session
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment[00m$ pwd
+[?2004l/home/rakeshsta/tamlep-rs/bash_assignment
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment[00m$ tree[K[K[K[Kls /
+[?2004l[0m[01;36mbin[0m                [01;34mboot[0m  [01;34metc[0m   [01;32minit[0m  [01;34mlib.usr-is-merged[0m  [01;34mlost+found[0m  [01;34mmnt[0m  [01;34mproc[0m  [01;34mrun[0m   [01;34msbin.usr-is-merged[0m  [01;34msrv[0m  [30;42mtmp[0m  [01;34mvar[0m
+[01;34mbin.usr-is-merged[0m  [01;34mdev[0m   [01;34mhome[0m  [01;36mlib[0m   [01;36mlib64[0m              [01;34mmedia[0m       [01;34mopt[0m  [01;34mroot[0m  [01;36msbin[0m  [01;34msnap[0m                [01;34msys[0m  [01;34musr[0m
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment[00m$ ls /[C-/F/ /
+[?2004l[0m[01;36mbin[0m@                [01;34mdev[0m/   [01;32minit[0m*               [01;36mlib64[0m@       [01;34mmnt[0m/   [01;34mroot[0m/  [01;34msbin.usr-is-merged[0m/  [01;34msys[0m/  [01;34mvar[0m/
+[01;34mbin.usr-is-merged[0m/  [01;34metc[0m/   [01;36mlib[0m@                [01;34mlost+found[0m/  [01;34mopt[0m/   [01;34mrun[0m/   [01;34msnap[0m/                [30;42mtmp[0m/
+[01;34mboot[0m/               [01;34mhome[0m/  [01;34mlib.usr-is-merged[0m/  [01;34mmedia[0m/       [01;34mproc[0m/  [01;36msbin[0m@  [01;34msrv[0m/                 [01;34musr[0m/
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment[00m$ clear
+[?2004l[H[2J[3J[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment[00m$ ls --help | less
+[?2004l[?1049h[22;0;0t[?1h=Usage: ls [OPTION]... [FILE]...
+List information about the FILEs (the current directory by default).
+Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --all                  do not ignore entries starting with .
+  -A, --almost-all           do not list implied . and ..
+      --author               with -l, print the author of each file
+  -b, --escape               print C-style escapes for nongraphic characters
+      --block-size=SIZE      with -l, scale sizes by SIZE when printing them;
+                             e.g., '--block-size=M'; see SIZE format below
+
+  -B, --ignore-backups       do not list implied entries ending with ~
+  -c                         with -lt: sort by, and show, ctime (time of last
+                             change of file status information);
+                             with -l: show ctime and sort by name;
+                             otherwise: sort by ctime, newest first
+
+  -C                         list entries by columns
+      --color[=WHEN]         color the output WHEN; more info below
+  -d, --directory            list directories themselves, not their contents
+  -D, --dired                generate output designed for Emacs' dired mode
+  -f                         list all entries in directory order
+  -F, --classify[=WHEN]      append indicator (one of */=>@|) to entries WHEN
+      --file-type            likewise, except do not append '*'
+      --format=WORD          across -x, commas -m, horizontal -x, long -l,
+                             single-column -1, verbose -l, vertical -C
+
+      --full-time            like -l --time-style=full-iso
+  -g                         like -l, but do not list owner
+:[K[K[?1l>[?1049l[23;0;0t[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment[00m$ man les[K[Ks | less
+[?2004l[?1049h[22;0;0t[?1h=LS(1)                                                 User Commands                                                LS(1)
+
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List information about the FILEs (the current directory by default).  Sort entries alphabetically if none of -cf‐
+       tuvSUX nor --sort is specified.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -a, --all
+              do not ignore entries starting with .
+
+       -A, --almost-all
+              do not list implied . and ..
+
+       --author
+              with -l, print the author of each file
+
+       -b, --escape
+              print C-style escapes for nongraphic characters
+
+       --block-size=SIZE
+              with -l, scale sizes by SIZE when printing them; e.g., '--block-size=M'; see SIZE format below
+
+       -B, --ignore-backups
+:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KBB[K              do not list implied entries ending with ~
+:[K[K [KESCESC[KOO[KAA[K[HMLS(1)                                                 User Commands                                                LS(1)
+[31;1H[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KBB[K              do not list implied entries ending with ~
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       -c     with  -lt:  sort by, and show, ctime (time of last change of file status information); with -l: show ctime
+:[K[K [KESCESC[KOO[KBB[K              and sort by name; otherwise: sort by ctime, newest first
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       -C     list entries by columns
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       --color[=WHEN]
+:[K[K[?1l>[?1049l[23;0;0t[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment[00m$ ls -lh .
+[?2004ltotal 12K
+drwxr-xr-x 3 rakeshsta rakeshsta 4.0K Oct 10 12:26 [0m[01;34mdata[0m
+-rw-r--r-- 1 rakeshsta rakeshsta 8.0K Oct 10 12:28 my_unix_session
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment[00m$ ls -lh .t .r .[C[C
+[?2004ltotal 12K
+drwxr-xr-x 3 rakeshsta rakeshsta 4.0K Oct 10 12:26 [0m[01;34mdata[0m
+-rw-r--r-- 1 rakeshsta rakeshsta 8.0K Oct 10 12:28 my_unix_session
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment[00m$ ls -F ../..
+[?2004l[0m[01;34mtamlep-rs[0m/
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment[00m$ ls -F ../..[K[K[K
+[?2004lREADME.md  [0m[01;34mbash_assignment[0m/
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment[00m$ cd data
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data[00m$ ch[Kd shell-lesson-data/exercise-data/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ pwd
+[?2004l/home/rakeshsta/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ ls -F
+[?2004l[0m[01;34malkanes[0m/  [01;34manimal-counts[0m/  [01;34mcreatures[0m/  numbers.txt  [01;34mwriting[0m/
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ cd ..
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data[00m$ pwd
+[?2004l/home/rakeshsta/tamlep-rs/bash_assignment/data/shell-lesson-data
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data[00m$ ls -F -a
+[?2004l[0m[01;34m.[0m/  [01;34m..[0m/  [01;34mexercise-data[0m/  [01;34mnorth-pacific-gyre[0m/
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data[00m$ ls ~
+[?2004l[0m[01;34mtamlep-rs[0m
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data[00m$ ls ~[C-~a~l~ ~
+[?2004ltotal 64
+drwxr-x--- 9 rakeshsta rakeshsta  4096 Oct 10 12:28 [0m[01;34m.[0m
+drwxr-xr-x 3 root      root       4096 Oct  8 07:17 [01;34m..[0m
+-rw------- 1 rakeshsta rakeshsta 10759 Oct 10 12:24 .bash_history
+-rw-r--r-- 1 rakeshsta rakeshsta   220 Oct  8 07:17 .bash_logout
+-rw-r--r-- 1 rakeshsta rakeshsta  3771 Oct  8 07:17 .bashrc
+drwx------ 3 rakeshsta rakeshsta  4096 Oct  8 07:26 [01;34m.cache[0m
+drwxr-xr-x 3 rakeshsta rakeshsta  4096 Oct  8 07:33 [01;34m.dotnet[0m
+drwxr-xr-x 2 rakeshsta rakeshsta  4096 Oct  8 07:19 [01;34m.landscape[0m
+-rw------- 1 rakeshsta rakeshsta    44 Oct 10 12:28 .lesshst
+drwxr-xr-x 3 rakeshsta rakeshsta  4096 Oct  8 11:05 [01;34m.local[0m
+-rw-r--r-- 1 rakeshsta rakeshsta     0 Oct 10 05:26 .motd_shown
+-rw-r--r-- 1 rakeshsta rakeshsta   807 Oct  8 07:17 .profile
+-rw-r--r-- 1 rakeshsta rakeshsta     0 Oct  8 08:55 .sudo_as_admin_successful
+drwxr-xr-x 3 rakeshsta rakeshsta  4096 Oct  8 07:26 [01;34m.vscode-remote-containers[0m
+drwxr-xr-x 5 rakeshsta rakeshsta  4096 Oct  8 07:26 [01;34m.vscode-server[0m
+drwxr-xr-x 4 rakeshsta rakeshsta  4096 Oct 10 12:16 [01;34mtamlep-rs[0m
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data[00m$ cd ~
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~[01;32mrakeshsta@TIGER05142[00m:[01;34m~[00m$ cd -
+[?2004l/home/rakeshsta/tamlep-rs/bash_assignment/data/shell-lesson-data
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data[00m$ ls -F /
+[?2004l[0m[01;36mbin[0m@                [01;34mdev[0m/   [01;32minit[0m*               [01;36mlib64[0m@       [01;34mmnt[0m/   [01;34mroot[0m/  [01;34msbin.usr-is-merged[0m/  [01;34msys[0m/  [01;34mvar[0m/
+[01;34mbin.usr-is-merged[0m/  [01;34metc[0m/   [01;36mlib[0m@                [01;34mlost+found[0m/  [01;34mopt[0m/   [01;34mrun[0m/   [01;34msnap[0m/                [30;42mtmp[0m/
+[01;34mboot[0m/               [01;34mhome[0m/  [01;34mlib.usr-is-merged[0m/  [01;34mmedia[0m/       [01;34mproc[0m/  [01;36msbin[0m@  [01;34msrv[0m/                 [01;34musr[0m/
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data[00m$ ls exercise-data/
+[?2004l[0m[01;34malkanes[0m  [01;34manimal-counts[0m  [01;34mcreatures[0m  numbers.txt  [01;34mwriting[0m
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data[00m$ ls exercise-data/-exercise-data/sexercise-data/ exercise-data/
+[?2004ltotal 20
+4 [0m[01;34malkanes[0m  4 [01;34manimal-counts[0m  4 [01;34mcreatures[0m  4 numbers.txt  4 [01;34mwriting[0m
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data[00m$ ls -s exercise-data/[1P exercise-data/h exercise-data/
+[?2004l[0m[01;34malkanes[0m  [01;34manimal-counts[0m  [01;34mcreatures[0m  numbers.txt  [01;34mwriting[0m
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data[00m$ ls -h exercise-data/[C[1P exercise-data/S exercise-data/
+[?2004l[0m[01;34malkanes[0m  [01;34manimal-counts[0m  [01;34mcreatures[0m  [01;34mwriting[0m  numbers.txt
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data[00m$ ls north-pacific-gyre/goo
+goodiff.sh   goostats.sh  
+]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data[00m$ ls north-pacific-gyre/goostats.sh 
+[?2004lnorth-pacific-gyre/goostats.sh
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data[00m$ ps[Kwd
+[?2004l/home/rakeshsta/tamlep-rs/bash_assignment/data/shell-lesson-data
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data[00m$ cd exercise-data/writing/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ ls -F
+[?2004lLittleWomen.txt  haiku.txt
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ mkdir thesis
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ mkdir thesis[7Pls -F
+[?2004lLittleWomen.txt  haiku.txt  [0m[01;34mthesis[0m/
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ ls -F thesis/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ mkdel [K[K[K[K[K[K[7mmkdir -p ../project/data ../p[27m[7mr[27m[7moject/results[27m[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ mkdir -p ../project/data ../project/results
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ ls -FR ../project/
+[?2004l../project/:
+[0m[01;34mdata[0m/  [01;34mresults[0m/
+
+../project/data:
+
+../project/results:
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ rm -ir ../project/
+[?2004lrm: descend into directory '../project/'? Y
+rm: remove directory '../project/data'? Y
+rm: remove directory '../project/results'? Y
+rm: remove directory '../project/'? Y
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ ls ..
+[?2004l[0m[01;34malkanes[0m  [01;34manimal-counts[0m  [01;34mcreatures[0m  numbers.txt  [01;34mwriting[0m
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ cd thesis/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing/thesis[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing/thesis[00m$ nano draft.txt
+[?2004l[?2004h[?1049h[22;0;0t[1;31r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[29;57H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 7.2                                              draft.txt                                                       [1;123H(B[m[30d(B[0;7m^G(B[m Help[30;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[30;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark[31d(B[0;7m^X(B[m Exit[31;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[2d[?12l[?25h[?25l[1;71H(B[0;7m*[123G(B[m[?12l[?25h[2dI[?25l[?12l[?25ht[?25l[?12l[?25h'[?25l[?12l[?25hs[?25l[?12l[?25h [?25l[?12l[?25hn[?25l[?12l[?25ho[?25l[?12l[?25hy[?25l[?12l[?25h [?25l[?12l[?25h[?25l[?12l[?25h [?25l[?12l[?25ht[?25l[?12l[?25h [?25l[?12l[?25h"[?25l[?12l[?25hp[?25l[?12l[?25hu[?25l[?12l[?25hb[?25l[?12l[?25hl[?25l[?12l[?25hi[?25l[29d[K[?12l[?25h[2;16Hs[?25l[?12l[?25hh[?25l[?12l[?25h"[?25l[?12l[?25h [?25l[?12l[?25ha[?25l[?12l[?25hn[?25l[?12l[?25hd[?25l[?12l[?25h [?25l[?12l[?25h[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25ho[?25l[?12l[?25hr[?25l[?12l[?25h [?25l[?12l[?25h"[?25l[?12l[?25hp[?25l[?12l[?25he[?25l[?12l[?25hr[?25l[?12l[?25hs[?25l[?12l[?25hi[?25l[?12l[?25hh[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25hi[?25l[?12l[?25hs[?25l[?12l[?25hh[?25l[?12l[?25h"[?25l[?12l[?25h [?25l[?12l[?25ha[?25l[?12l[?25hn[?25l[?12l[?25hy[?25l[?12l[?25h [?25l[?12l[?25hm[?25l[?12l[?25ho[?25l[?12l[?25hr[?25l[?12l[?25he[?25l[?12l[?25h,[?25l[3d[?12l[?25h[?25l[?12l[?25hi[?25l[?12l[?25ht[?25l[?12l[?25h'[?25l[?12l[?25hs[?25l[?12l[?25h [?25l[?12l[?25h"[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[2;41H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[1P[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[1P[?25l[?12l[?25h[3;7H[?25l[?12l[?25hs[?25l[?12l[?25hh[?25l[?12l[?25ha[?25l[?12l[?25hr[?25l[?12l[?25he[?25l[?12l[?25h [?25l[?12l[?25ha[?25l[?12l[?25hn[?25l[?12l[?25hd[?25l[?12l[?25h [?25l[?12l[?25ht[?25l[?12l[?25hh[?25l[?12l[?25hr[?25l[?12l[?25hi[?25l[?12l[?25hv[?25l[?12l[?25he[?25l[?12l[?25h"[?25l[?12l[?25h.[?25l[30;16H[16X[30;32H(B[0;7mM-D(B[m DOS Format      [30;61H  (B[0;7mM-A(B[m Append[21X[30;94H(B[0;7mM-B(B[m Backup File[K[31;2H(B[0;7mC(B[m Cancel[16G[16X[31;32H(B[0;7mM-M(B[m Mac Format        [61G  (B[0;7mM-P(B[m Prepend[20X[31;94H(B[0;7m^T(B[m Browse[K[29d(B[0;7mFile Name to Write: draft.txt                                                                                               [29;30H(B[m[?12l[?25h[?25l[29;55H[1K (B[0;7m[ Writing... ](B[m[K[1;71H(B[0;7m [123G(B[m[29;54H(B[0;7m[ Wrote 2 lines ](B[m[30;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[30;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo       (B[0;7mM-A(B[m Set Mark[31;2H(B[0;7mX(B[m Exit  [16G(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo       (B[0;7mM-6(B[m Copy[?12l[?25h[3;25H[?25l[29d[J[31d[?12l[?25h[31;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing/thesis[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing/thesis[00m$ cat draft.txt 
+[?2004lIt's not "publish or perish" any more,
+it's "share and thrive".
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing/thesis[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing/thesis[00m$ ls
+[?2004ldraft.txt
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing/thesis[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing/thesis[00m$ touch my_file.txt
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing/thesis[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing/thesis[00m$ ls -l .
+[?2004ltotal 4
+-rw-r--r-- 1 rakeshsta rakeshsta 64 Oct 10 12:54 draft.txt
+-rw-r--r-- 1 rakeshsta rakeshsta  0 Oct 10 12:55 my_file.txt
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing/thesis[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing/thesis[00m$ rm my_file.txt 
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing/thesis[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing/thesis[00m$ cd ..
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ mv thesis/draft.txt thesis/qu otes.txt
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ ls thesis/
+[?2004lquotes.txt
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ mv -i thesis/quotes.txt 
+[?2004lmv: missing destination file operand after 'thesis/quotes.txt'
+Try 'mv --help' for more information.
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ mv -i thesis/quotes.txt .
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ ls
+[?2004lLittleWomen.txt  haiku.txt  quotes.txt  [0m[01;34mthesis[0m
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ mv thesis/[K[K[K[K[K[K[K[K quotes.txt thesis/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ ls
+[?2004lLittleWomen.txt  haiku.txt  [0m[01;34mthesis[0m
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ lsmv quotes.txt thesis/ls[Kmv -i thesis/quotes.txt .
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ ls
+[?2004lLittleWomen.txt  haiku.txt  quotes.txt  [0m[01;34mthesis[0m
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ cp quotes.txt thesis/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ cp quotes.txt thesis/ls[Kmv -i thesis/quotes.txt .
+[?2004lmv: overwrite './quotes.txt'? Y
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ ls thesis/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ ls quotes.txt 
+[?2004lquotes.txt
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ cp quotes.txt thesis/quotatio ns.txt
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ cp quotes.txt thesis/quotations.txt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cthesis/quotations[1P.txt[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[Chesis/quotations.[1Ptxt[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ [C[C[C[C[C[C[C[C[C[C[C[Cthesis/quotations.t[1Pxt[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ [C[C[C[C[C[C[C[C[C[C[Chesis/quotations.tx[1Pt[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ [C[C[C[C[C[C[C[C[C[Cthesis/quotations.txt[K[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ [C[C[C[C[C[C[C[C[Cthesis/quotations.txt [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pthesis/quotations.txt
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Phesis/quotations.txt[1Pthesis/quotations.txt[1Pthesis/quotations.txt[1Pthesis/quotations.txt[1Pthesis/quotations.txt[1Pthesis/quotations.txt[1Pthesis/quotations.txtlthesis/quotations.txtsthesis/quotations.txt thesis/quotations.txt
+[?2004lthesis/quotations.txt
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ ls thesis/quotations.txt quotes.txt 
+[?2004lquotes.txt  thesis/quotations.txt
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ cp -r thesis/ thesis/[K_backup[1P thesis_backup[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ ls thesis thesis-[K_backup/
+[?2004lthesis:
+quotations.txt
+
+thesis_backup/:
+quotations.txt
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ ls thesis thesis_backup/[Krm quotes.txt 
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ ls quotes.txt
+[?2004lls: cannot access 'quotes.txt': No such file or directory
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ [7mrm -i thesis_backup/quotation[27m[7ms[27m[7m.txt[27m[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ rm -i thesis_backup/quotations.txt
+[?2004lrm: remove regular file 'thesis_backup/quotations.txt'? Y
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ rm thesis
+[?2004lrm: cannot remove 'thesis': Is a directory
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ rm thesis-thesisrthesis thesis
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/writing[00m$ cd ../[K
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ mkdir backup
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ cp creatures/minotaur.dat backup/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ cd creatures/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[00m$ ls -F
+[?2004lbasilisk.dat  minotaur.dat  unicorn.dat
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[00m$ cd ..a[K/alkanes/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ [7mls *t??ne.pdb[27mls *t??ne.pdb
+[?2004lethane.pdb  methane.pdb
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ cd ..
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ [7mmkdir -p 2016-05-20/data/raw[27mmkdir -p 2016-05-20/data/raw
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ [7mmkdir -p 2016-05-20/data/processed[27mmkdir -p 2016-05-20/data/processed
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ ls
+[?2004l[0m[01;34m2016-05-20[0m  [01;34malkanes[0m  [01;34manimal-counts[0m  [01;34mbackup[0m  [01;34mcreatures[0m  numbers.txt  [01;34mwriting[0m
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ tree .
+[?2004l[01;34m.[0m
+├── [01;34m2016-05-20[0m
+│   └── [01;34mdata[0m
+│       ├── [01;34mprocessed[0m
+│       └── [01;34mraw[0m
+├── [01;34malkanes[0m
+│   ├── cubane.pdb
+│   ├── ethane.pdb
+│   ├── methane.pdb
+│   ├── octane.pdb
+│   ├── pentane.pdb
+│   └── propane.pdb
+├── [01;34manimal-counts[0m
+│   └── animals.csv
+├── [01;34mbackup[0m
+│   └── minotaur.dat
+├── [01;34mcreatures[0m
+│   ├── basilisk.dat
+│   ├── minotaur.dat
+│   └── unicorn.dat
+├── numbers.txt
+└── [01;34mwriting[0m
+    ├── LittleWomen.txt
+    ├── haiku.txt
+    └── [01;34mthesis_backup[0m
+
+11 directories, 14 files
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ rm -ri 20[K[K"2016-05-20"
+[?2004lrm: descend into directory '2016-05-20'? Y
+rm: descend into directory '2016-05-20/data'? Y
+rm: remove directory '2016-05-20/data/raw'? Y
+rm: remove directory '2016-05-20/data/processed'? Y
+rm: remove directory '2016-05-20/data'? Y
+rm: remove directory '2016-05-20'? Y
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ ls
+[?2004l[0m[01;34malkanes[0m  [01;34manimal-counts[0m  [01;34mbackup[0m  [01;34mcreatures[0m  numbers.txt  [01;34mwriting[0m
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ cd alkanes/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ ls
+[?2004lcubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ wc cubane.pdb 
+[?2004l  20  156 1158 cubane.pdb
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ wc cubane.pdb [1P[1P[1P[1P[1P[1P[1@*
+[?2004l  20  156 1158 cubane.pdb
+  12   84  622 ethane.pdb
+   9   57  422 methane.pdb
+  30  246 1828 octane.pdb
+  21  165 1226 pentane.pdb
+  15  111  825 propane.pdb
+ 107  819 6081 total
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ wc *.pdb [1@-[1@l[1@ 
+[?2004l  20 cubane.pdb
+  12 ethane.pdb
+   9 methane.pdb
+  30 octane.pdb
+  21 pentane.pdb
+  15 propane.pdb
+ 107 total
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ wc -l *.pdb  >[1P>[C[C lengths.txt
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ cat lengths.txt 
+[?2004l  20 cubane.pdb
+  12 ethane.pdb
+   9 methane.pdb
+  30 octane.pdb
+  21 pentane.pdb
+  15 propane.pdb
+ 107 total
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ less lengths.txt 
+[?2004l[?1049h[22;0;0t[?1h=  20 cubane.pdb
+  12 ethane.pdb
+   9 methane.pdb
+  30 octane.pdb
+  21 pentane.pdb
+  15 propane.pdb
+ 107 total
+[7mlengths.txt (END)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ sort -n lengths.txt 
+[?2004l   9 methane.pdb
+  12 ethane.pdb
+  15 propane.pdb
+  20 cubane.pdb
+  21 pentane.pdb
+  30 octane.pdb
+ 107 total
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ cd ..
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ ls
+[?2004l[0m[01;34malkanes[0m  [01;34manimal-counts[0m  [01;34mbackup[0m  [01;34mcreatures[0m  numbers.txt  [01;34mwriting[0m
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ lscd ..sort -n lengths.txt [1P[1P[1P[1P[1P[1P[1P[1@n[1@u[1@m[1@b[7@ers.txt[1P[1P[1P[1P [K
+[?2004l2
+6
+10
+19
+22
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ sort -n numbers.txt[1P numbers.txt[1P numbers.txt[1Pnumbers.txt
+[?2004l10
+19
+2
+22
+6
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ cat numbers.txt | sort
+[?2004l10
+19
+2
+22
+6
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ cat numbers.txt 
+[?2004l10
+2
+19
+22
+6
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ cat numbers.txt | sort -n
+[?2004l2
+6
+10
+19
+22
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ cd alkanes/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ sort -n lengths.txt 
+[?2004l   9 methane.pdb
+  12 ethane.pdb
+  15 propane.pdb
+  20 cubane.pdb
+  21 pentane.pdb
+  30 octane.pdb
+ 107 total
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ [7msort -n lengths.txt > sorted-[27m[7ml[27m[7mengths.txt[27m[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ sort -n lengths.txt > sorted-lengths.txt
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ [7mhead -n 1 sorted-lengths.txt[27mhead -n 1 sorted-lengths.txt
+[?2004l   9 methane.pdb
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ [7mecho The echo command prints [27m[7mt[27m[7mext[27m[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ echo The echo command prints text
+[?2004lThe echo command prints text
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ [7mecho hello > testfile01.txt[27mecho hello > testfile01.txt
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ echo hello > testfile01.txt
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ [7mecho hello >> testfile02.txt[27mecho hello >> testfile02.txt
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ echo hello >> testfile02.txt
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ cat testfile01.txt 
+[?2004lhello
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ cat testfile01.txt [1P[1@2
+[?2004lhello
+hello
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ rm testfile0*.txt
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ ls
+[?2004lcubane.pdb  ethane.pdb  lengths.txt  methane.pdb  octane.pdb  pentane.pdb  propane.pdb  sorted-lengths.txt
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ cd ..
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ cd animal-counts/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ [7mhead -n 3 animals.csv >[27m[7m [27m[7manimals-subset.csv[27m[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ head -n 3 animals.csv > animals-subset.csv
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ [7mtail -n 2 animals.csv >[27m[7m>[27m[7m animals-subset.csv[27m[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ tail -n 2 animals.csv >> animals-subset.csv
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ [7msort -n lengths.txt | h[27m[7me[27m[7mad -n 1[27m[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ sort -n lengths.txt | head -n 1
+[?2004lsort: cannot read: lengths.txt: No such file or directory
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ sort -n lengths.txt | head -n 1[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.lengths.txt | h[1@e[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ [C[C[C[C[C[C[C[C[C.lengths.txt | [1@h[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ [C[C[C[C[C[C[C[C[C[C/lengths.txt |[1@ [A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ [C[C[C[C[C[C[C[C[C[C[Calengths.txt [1@|[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[Clengths.txt[1@ [A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[Ckanes/lengt[6@hs.txt[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l   9 methane.pdb
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ cd ../alkanes/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ [7mwc -l *.pdb | sort -n[27mwc -l *.pdb | sort -n
+[?2004l   9 methane.pdb
+  12 ethane.pdb
+  15 propane.pdb
+  20 cubane.pdb
+  21 pentane.pdb
+  30 octane.pdb
+ 107 total
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ [7mwc -l *.pdb | sort -n | head [27m[7m-[27m[7mn 1[27m[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ wc -l *.pdb | sort -n | head -n 1
+[?2004l   9 methane.pdb
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ [7mwc -l * | sort -n | head -n 3[27m [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cwc -l * | sort -n | head -n 3 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K3
+[?2004l   7 lengths.txt
+   7 sorted-lengths.txt
+   9 methane.pdb
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ cd ../animal-counts/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ [7mcat animals.csv | head [27m[7m-[27m[7mn 5 | tail -n 3 | sort -r > final.txt[27m[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ cat animals.csv | head -n 5 | tail -n 3 | sort -r > final.txt
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ cat final.txt 
+[?2004l2012-11-06,rabbit,19
+2012-11-06,deer,2
+2012-11-05,raccoon,7
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ [7mcut -d , -f 2 animals.c[27m[7ms[27m[7mv[27m[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ cut -d , -f 2 animals.csv
+[?2004ldeer
+rabbit
+raccoon
+rabbit
+deer
+fox
+rabbit
+bear
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ [7mcut -d, -f 2 animals.cs[27m[7mv[27m[7m | sort | uniq -c[27m[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ cut -d, -f 2 animals.csv | sort | uniq -c
+[?2004l      1 bear
+      2 deer
+      1 fox
+      3 rabbit
+      1 raccoon
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ cd ../../north-pacific-gyre/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[00m$ [7mwc -l *.txt[27mwc -l *.txt
+[?2004l  300 NENE01729A.txt
+  300 NENE01729B.txt
+  300 NENE01736A.txt
+  300 NENE01751A.txt
+  300 NENE01751B.txt
+  300 NENE01812A.txt
+  300 NENE01843A.txt
+  300 NENE01843B.txt
+  300 NENE01971Z.txt
+  300 NENE01978A.txt
+  300 NENE01978B.txt
+  240 NENE02018B.txt
+  300 NENE02040A.txt
+  300 NENE02040B.txt
+  300 NENE02040Z.txt
+  300 NENE02043A.txt
+  300 NENE02043B.txt
+ 5040 total
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[00m$ [7mwc -l *.txt | sort -n | head -n [27m[7m5[27m[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[00m$ wc -l *.txt | sort -n | head -n 5
+[?2004l  240 NENE02018B.txt
+  300 NENE01729A.txt
+  300 NENE01729B.txt
+  300 NENE01736A.txt
+  300 NENE01751A.txt
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[00m$ [7mwc -l *.txt | sort -n | tail -n [27m[7m5[27m[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[00m$ wc -l *.txt | sort -n | tail -n 5
+[?2004l  300 NENE02040B.txt
+  300 NENE02040Z.txt
+  300 NENE02043A.txt
+  300 NENE02043B.txt
+ 5040 total
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[00m$ [7mls *Z.txt[27mls *Z.txt
+[?2004lNENE01971Z.txt  NENE02040Z.txt
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[00m$ ls
+[?2004lNENE01729A.txt  NENE01751A.txt  NENE01843A.txt  NENE01978A.txt  NENE02040A.txt  NENE02043A.txt  goostats.sh
+NENE01729B.txt  NENE01751B.txt  NENE01843B.txt  NENE01978B.txt  NENE02040B.txt  NENE02043B.txt
+NENE01736A.txt  NENE01812A.txt  NENE01971Z.txt  NENE02018B.txt  NENE02040Z.txt  goodiff.sh
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[00m$ cd ..
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data[00m$ ls
+[?2004l[0m[01;34mexercise-data[0m  [01;34mnorth-pacific-gyre[0m
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data[00m$ cd exercise-data/am[K[Kanimal-counts/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ ls
+[?2004lanimals-subset.csv  animals.csv  final.txt
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/animal-counts[00m$ cd ..
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ cd alkanes/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ ls
+[?2004lcubane.pdb  ethane.pdb  lengths.txt  methane.pdb  octane.pdb  pentane.pdb  propane.pdb  sorted-lengths.txt
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ cd ..
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ ls
+[?2004l[0m[01;34malkanes[0m  [01;34manimal-counts[0m  [01;34mbackup[0m  [01;34mcreatures[0m  numbers.txt  [01;34mwriting[0m
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ cd creatures/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[00m$ ls
+[?2004lbasilisk.dat  minotaur.dat  unicorn.dat
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[00m$ [7mhead -n 5 basilisk.dat mino[27m[7mt[27m[7maur.dat unicorn.dat[27m[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[00m$ head -n 5 basilisk.dat minotaur.dat unicorn.dat
+[?2004l==> basilisk.dat <==
+COMMON NAME: basilisk
+CLASSIFICATION: basiliscus vulgaris
+UPDATED: 1745-05-02
+CCCCAACGAG
+GAAACAGATC
+
+==> minotaur.dat <==
+COMMON NAME: minotaur
+CLASSIFICATION: bos hominus
+UPDATED: 1765-02-17
+CCCGAAGGAC
+CGACATCTCT
+
+==> unicorn.dat <==
+COMMON NAME: unicorn
+CLASSIFICATION: equus monoceros
+UPDATED: 1738-11-24
+AGCCGGGTCG
+CTTTACCTTA
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[00m$ for filename in $ [K()l)s) )*).)d)a)t) [A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K)
+[?2004l[?2004h> do
+[?2004l[?2004h>     [7mecho $filename[27m[C[C[C[C[C[Cecho $filename
+[?2004l[?2004h>     [7mhead -n 2 $filename | tail -n 1[27m[C[C[C[C[C[Chead -n 2 $filename | tail -n 1
+[?2004l[?2004h> done
+[?2004lbasilisk.dat
+CLASSIFICATION: basiliscus vulgaris
+minotaur.dat
+CLASSIFICATION: bos hominus
+unicorn.dat
+CLASSIFICATION: equus monoceros
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[00m$ [7mfor loop_variable in 0 1 2 [27m[7m3[27m[7m 4 5 6 7 8 9[27m[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[00m$ for loop_variable in 0 1 2 3 4 5 6 7 8 9
+[?2004l[?2004h> do
+[?2004l[?2004h>     [7mecho $loop_variable[27m[C[C[C[C[C[Cecho $loop_variable
+[?2004l[?2004h> done
+[?2004l0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[00m$ [7mfor datafile in *.pdb[27mfor datafile in *.pdb
+[?2004l[?2004h> do
+[?2004l[?2004h>     [7mls *.pdb[27m[C[C[C[C[C[Cls *.pdb
+[?2004l[?2004h> done
+[?2004lls: cannot access '*.pdb': No such file or directory
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[00m$ ls
+[?2004lbasilisk.dat  minotaur.dat  unicorn.dat
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[00m$ cd ../a[Ka[K[K/[K
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ ls
+[?2004l[0m[01;34malkanes[0m  [01;34manimal-counts[0m  [01;34mbackup[0m  [01;34mcreatures[0m  numbers.txt  [01;34mwriting[0m
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data[00m$ ac alkanes/[K[K[K[K[K[K[K[K[K[K[Kcd a;[Klkanes/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ ls
+[?2004lcubane.pdb  ethane.pdb  lengths.txt  methane.pdb  octane.pdb  pentane.pdb  propane.pdb  sorted-lengths.txt
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ [7mfor datafile in *.pdb[27mfor datafile in *.pdb
+[?2004l[?2004h> do
+[?2004l[?2004h>     [7mls *.pdb[27m[C[C[C[C[C[Cls *.pdb
+[?2004l[?2004h> done
+[?2004lcubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ [7mfor datafile in *.pdb[27mfor datafile in *.pdb
+[?2004l[?2004h> do
+[?2004l[?2004h>     [7mls $datafile[27m[C[C[C[C[C[Cls $datafile
+[?2004l[?2004h> done
+[?2004lcubane.pdb
+ethane.pdb
+methane.pdb
+octane.pdb
+pentane.pdb
+propane.pdb
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ [7mfor filename in c*[27mfor filename in c*
+[?2004l[?2004h> [7mdo[27mdo
+[?2004l[?2004h>     [7mls $filename[27m[C[C[C[C[C[C[12@ls $filename[C[C[C[C[C[C[C[C[C[C[C[Cls $filename[K[K[K[K[K[K[K[K[K[K[K[K
+[?2004l[?2004h> done
+[?2004lcubane.pdb
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ for filename in c*; do     ls $filename; done[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C*c*; do     ls[1@ [A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[?2004lcubane.pdb
+octane.pdb
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ [7mfor datafile in *.pdb[27mfor datafile in *.pdb
+[?2004l[?2004h> do
+[?2004l[?2004h>     [7mcat $datafile >> all.pdb[27m[C[C[C[C[C[Ccat $datafile >> all.pdb
+[?2004l[?2004h> done
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ ls
+[?2004lall.pdb  cubane.pdb  ethane.pdb  lengths.txt  methane.pdb  octane.pdb  pentane.pdb  propane.pdb  sorted-lengths.txt
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ l[Kwc -l *.pw[Kdb
+[?2004l  107 all.pdb
+   20 cubane.pdb
+   12 ethane.pdb
+    9 methane.pdb
+   30 octane.pdb
+   21 pentane.pdb
+   15 propane.pdb
+  214 total
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/alkanes[00m$ cd ../creatures/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[00m$ [7mfor filename in *.dat[27mfor filename in *.dat
+[?2004l[?2004h> do
+[?2004l[?2004h>    [7mecho $filename[27m[C[C[C[C[Cecho $filename
+[?2004l[?2004h>    [7mhead -n 100 $filename | tail -n 20[27m[C[C[C[C[Chead -n 100 $filename | tail -n 20
+[?2004l[?2004h> done
+[?2004lbasilisk.dat
+CGGTACCGAA
+AAGGGTCGCG
+CAAGTGTTCC
+CGGGACAATA
+GTTCTGCTAA
+GATAAGTATG
+TGCCGACTTA
+CCCGACCGTC
+TAGGTTATAA
+GGCACAACCG
+CTTCACTGTA
+GAGGTGTACA
+AGGATCCGTT
+GCGCGGGCGG
+CAGTCTATGT
+TTTTCGACAC
+TGGACTGCTT
+CCCTTTGAGG
+GTGGATTTTT
+CGTAACGGGT
+minotaur.dat
+GGTTGGACCG
+AGTGAACGAA
+GCGATTGATG
+CCCAGTATTG
+GTTTCGGGTC
+CCACCAGGAA
+CAATGTTGGA
+CTTTAGCACG
+ACAGGAATCA
+ATCGTTTCGT
+AATGGTGGCA
+CTTTGGGGTT
+GCAGGCCCGC
+CTGTGCCTTC
+AACGGTCGGC
+AAATAGGACA
+GAGATTTCCT
+GCCTCAAACA
+TCGCAAGACG
+ATTTATCCGG
+unicorn.dat
+CGGTACCGAA
+AAGGGTCGCG
+CAAGTGTTCC
+CGGGACAATA
+GTTCTGCTAA
+GATAAGTATG
+TGCCGACTTA
+CCCGACCGTC
+TAGGTTATAA
+GGCACAACCG
+CTTCACTGTA
+GAGGTGTACA
+AGGATCCGTT
+GCGCGGGCGG
+CAGTCTATGT
+TTTTCGACAC
+TGGACTGCTT
+CCCTTTGAGG
+GTGGATTTTT
+CGTAACGGGT
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[00m$ [7mfor filename in *.dat[27mfor filename in *.dat
+[?2004l[?2004h> do
+[?2004l[?2004h>     [7mcp $filename original-$filename[27m[C[C[C[C[C[Ccp $filename original-$filename
+[?2004l[?2004h> done
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[00m$ ls
+[?2004lbasilisk.dat  minotaur.dat  original-basilisk.dat  original-minotaur.dat  original-unicorn.dat  unicorn.dat
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/exercise-data/creatures[00m$ cd ../../north-pacific-gyre/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[00m$ for datafile in [7mNENE*A.txt NENE*[27m[7mB[27m[7m.txt[27m[A]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CNENE*A.txt NENE*B.txt
+[?2004l[?2004h> do
+[?2004l[?2004h>     [7mecho $datafile[27m[C[C[C[C[C[Cecho $datafile
+[?2004l[?2004h> done
+[?2004lNENE01729A.txt
+NENE01736A.txt
+NENE01751A.txt
+NENE01812A.txt
+NENE01843A.txt
+NENE01978A.txt
+NENE02040A.txt
+NENE02043A.txt
+NENE01729B.txt
+NENE01751B.txt
+NENE01843B.txt
+NENE01978B.txt
+NENE02018B.txt
+NENE02040B.txt
+NENE02043B.txt
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[00m$ for datafile in NENE*A.txt NENE*B.txt; do     echo $datafile; done[1@ [1@s[1@t[1@a[1@t[1@s[1@-[1@$[1@d[1@a[1@t[1@a[1@f[1@i[1@l[1@e[C[C[C[C[C[C
+[?2004lNENE01729A.txt stats-NENE01729A.txt
+NENE01736A.txt stats-NENE01736A.txt
+NENE01751A.txt stats-NENE01751A.txt
+NENE01812A.txt stats-NENE01812A.txt
+NENE01843A.txt stats-NENE01843A.txt
+NENE01978A.txt stats-NENE01978A.txt
+NENE02040A.txt stats-NENE02040A.txt
+NENE02043A.txt stats-NENE02043A.txt
+NENE01729B.txt stats-NENE01729B.txt
+NENE01751B.txt stats-NENE01751B.txt
+NENE01843B.txt stats-NENE01843B.txt
+NENE01978B.txt stats-NENE01978B.txt
+NENE02018B.txt stats-NENE02018B.txt
+NENE02040B.txt stats-NENE02040B.txt
+NENE02043B.txt stats-NENE02043B.txt
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[00m$ for datafile in NENE*A.txt NENE*B.txt; do     echo $datafile stats-$datafile; done[C[1P[1P[1P[1P[1@b[1@a[1@s[1@h[C[1@ [1@g[1@o[1@o[1@s[C[1@t[1@a[1@t[1@s[1@.[1@s[1@h[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l^X  ^C
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[00m$ for datafile in NENE*A.txt NENE*B.txt; do     bash goostats.sh $datafile stats-$datafile; done[1@e[1@c[1@h[1@o[1@ [1@$[1@d[1@a[1@t[1@a[1@f[1@l[1P[1@i[1@l[1@e[1@;[1@ [1@ [1@ [1@ [1@ 
+[?2004lNENE01729A.txt
+NENE01736A.txt
+NENE01751A.txt
+NENE01812A.txt
+NENE01843A.txt
+NENE01978A.txt
+NENE02040A.txt
+NENE02043A.txt
+NENE01729B.txt
+NENE01751B.txt
+NENE01843B.txt
+NENE01978B.txt
+NENE02018B.txt
+NENE02040B.txt
+NENE02043B.txt
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[00m$ less !$
+[?2004lless done
+done: No such file or directory
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[00m$ history | tail -n 5
+[?2004l  665  for datafile in NENE*A.txt NENE*B.txt; do     echo $datafile stats-$datafile; done
+  666  for datafile in NENE*A.txt NENE*B.txt; do     bash goostats.sh $datafile stats-$datafile; done
+  667  for datafile in NENE*A.txt NENE*B.txt; do     echo $datafile;     bash goostats.sh $datafile stats-$datafile; done
+  668  less done
+  669  history | tail -n 5
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs/bash_assignment/data/shell-lesson-data/north-pacific-gyre[00m$ exit
+[?2004lexit
+
+Script done on 2024-10-10 13:38:21+00:00 [COMMAND_EXIT_CODE="0"]
