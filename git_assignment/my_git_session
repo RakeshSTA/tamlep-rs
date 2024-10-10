@@ -1,0 +1,192 @@
+Script started on 2024-10-10 21:05:49+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="112" LINES="28"]
+[?2004h]0;rakeshsta@TIGER05142: ~[01;32mrakeshsta@TIGER05142[00m:[01;34m~[00m$ git config --list --show-origin [K
+[?2004l[?1h=file:/home/rakeshsta/.gitconfig credential.https://github.com.helper=[m
+file:/home/rakeshsta/.gitconfig credential.https://github.com.helper=!/usr/bin/gh auth git-credential[m
+file:/home/rakeshsta/.gitconfig credential.https://gist.github.com.helper=[m
+file:/home/rakeshsta/.gitconfig credential.https://gist.github.com.helper=!/usr/bin/gh auth git-credential[m
+[K[?1l>[?2004h]0;rakeshsta@TIGER05142: ~[01;32mrakeshsta@TIGER05142[00m:[01;34m~[00m$ cd ..[K[Ktamlep-rs/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs[00m$ git status
+[?2004lOn branch git_section
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mgit_assignment/[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs[00m$ git statuscd tamlep-rs/[3Pgit status[Kgit statuscd tamlep-rs/git config --list --show-origin
+[?2004l[?1h=file:/home/rakeshsta/.gitconfig credential.https://github.com.helper=[m
+file:/home/rakeshsta/.gitconfig credential.https://github.com.helper=!/usr/bin/gh auth git-credential[m
+file:/home/rakeshsta/.gitconfig credential.https://gist.github.com.helper=[m
+file:/home/rakeshsta/.gitconfig credential.https://gist.github.com.helper=!/usr/bin/gh auth git-credential[m
+file:.git/config        core.repositoryformatversion=0[m
+file:.git/config        core.filemode=true[m
+file:.git/config        core.bare=false[m
+file:.git/config        core.logallrefupdates=true[m
+file:.git/config        remote.origin.url=https://github.com/RakeshSTA/tamlep-rs.git[m
+file:.git/config        remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*[m
+file:.git/config        branch.main.remote=origin[m
+file:.git/config        branch.main.merge=refs/heads/main[m
+file:.git/config        user.name=RakeshSTA[m
+file:.git/config        user.email=rakesh.sukumar@tigeranalytics.com[m
+[K[?1l>[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs[00m$ [7mgit config --global core.editor "code --wait"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit config --global core.editor "code --wait"
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs[00m$ [7mgit config --global init.defaultBranch main[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit config --global init.defaultBranch main
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs[00m$ git config --global init.defaultBranch maincore.editor "code --wait"[14Plist --show-origin
+[?2004l[?1h=file:/home/rakeshsta/.gitconfig credential.https://github.com.helper=[m
+file:/home/rakeshsta/.gitconfig credential.https://github.com.helper=!/usr/bin/gh auth git-credential[m
+file:/home/rakeshsta/.gitconfig credential.https://gist.github.com.helper=[m
+file:/home/rakeshsta/.gitconfig credential.https://gist.github.com.helper=!/usr/bin/gh auth git-credential[m
+file:/home/rakeshsta/.gitconfig core.editor=code --wait[m
+file:/home/rakeshsta/.gitconfig init.defaultbranch=main[m
+file:.git/config        core.repositoryformatversion=0[m
+file:.git/config        core.filemode=true[m
+file:.git/config        core.bare=false[m
+file:.git/config        core.logallrefupdates=true[m
+file:.git/config        remote.origin.url=https://github.com/RakeshSTA/tamlep-rs.git[m
+file:.git/config        remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*[m
+file:.git/config        branch.main.remote=origin[m
+file:.git/config        branch.main.merge=refs/heads/main[m
+file:.git/config        user.name=RakeshSTA[m
+file:.git/config        user.email=rakesh.sukumar@tigeranalytics.com[m
+[K[?1l>[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs[00m$ code --help | less
+[?2004l[?1049h[22;0;0t[?1h=code 1.94.0
+
+Usage: code [options][paths...]
+
+To read from stdin, append '-' (e.g. 'ps aux | grep code | code -')
+
+Options
+  -d --diff <file> <file>                    Compare two files with each
+                                             other.
+  -m --merge <path1> <path2> <base> <result> Perform a three-way merge by
+                                             providing paths for two modified
+                                             versions of a file, the common
+                                             origin of both modified versions
+                                             and the output file to save merge
+                                             results.
+  -a --add <folder>                          Add folder(s) to the last active
+                                             window.
+  -g --goto <file:line[:character]>          Open a file at the path on the
+                                             specified line and character
+                                             position.
+  -n --new-window                            Force to open a new window.
+  -r --reuse-window                          Force to open a file or folder in
+                                             an already opened window.
+  -w --wait                                  Wait for the files to be closed
+                                             before returning.
+  --locale <locale>                          The locale to use (e.g. en-US or
+                                             zh-TW).
+:[K[K[?1l>[?1049l[23;0;0t[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs[00m$ [?2004l
+lesscodecc: command not found
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs[00m$ [?2004l
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs[00m$ [?2004l
+codecodecode: command not found
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs[00m$ [?2004l
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs[00m$ [?2004l
+1.94.0
+d78a74bcdfad14d5d3b1b782f87255d802b57511
+x64
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs[00m$ [?2004l
+exit
+
+Script done on 2024-10-10 21:09:11+00:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2024-10-10 21:09:38+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="112" LINES="28"]
+[?2004h]0;rakeshsta@TIGER05142: ~[01;32mrakeshsta@TIGER05142[00m:[01;34m~[00m$ cd tamlep-rs/
+[?2004l[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs[00m$ [7mgit config user.name[27mgit config user.name
+[?2004lRakeshSTA
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs[00m$ git config user.name[K[K[K[Kemail
+[?2004lrakesh.sukumar@tigeranalytics.com
+[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs[00m$ git config user.email[1Pname[7Pcd tamlep-rs/script -a ~/tamlep-rs/git_assignment/my_git_session[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kcode --version[2Pcodecode --help | lesscodecc[Kgit config --list --show-origin
+[?2004l[?1h=file:/home/rakeshsta/.gitconfig credential.https://github.com.helper=[m
+file:/home/rakeshsta/.gitconfig credential.https://github.com.helper=!/usr/bin/gh auth git-credential[m
+file:/home/rakeshsta/.gitconfig credential.https://gist.github.com.helper=[m
+file:/home/rakeshsta/.gitconfig credential.https://gist.github.com.helper=!/usr/bin/gh auth git-credential[m
+file:/home/rakeshsta/.gitconfig core.editor=code --wait[m
+file:/home/rakeshsta/.gitconfig init.defaultbranch=main[m
+file:.git/config        core.repositoryformatversion=0[m
+file:.git/config        core.filemode=true[m
+file:.git/config        core.bare=false[m
+file:.git/config        core.logallrefupdates=true[m
+file:.git/config        remote.origin.url=https://github.com/RakeshSTA/tamlep-rs.git[m
+file:.git/config        remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*[m
+file:.git/config        branch.main.remote=origin[m
+file:.git/config        branch.main.merge=refs/heads/main[m
+file:.git/config        user.name=RakeshSTA[m
+file:.git/config        user.email=rakesh.sukumar@tigeranalytics.com[m
+[K[?1l>[?2004h]0;rakeshsta@TIGER05142: ~/tamlep-rs[01;32mrakeshsta@TIGER05142[00m:[01;34m~/tamlep-rs[00m$ git help config
+[?2004l[?1049h[22;0;0t[?1h=[4mGIT-CONFIG[24m(1)                                     Git Manual                                    [4mGIT-CONFIG[24m(1)[m
+[m
+[1mNAME[0m[m
+       git-config - Get and set repository or global options[m
+[m
+[1mSYNOPSIS[0m[m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--type=<type>] [--fixed-value] [--show-origin] [--show-scope] [-z|--null] <na[m [4m[24m[4m[24mme> [<value> [<value-pattern>]][m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--type=<type>] --add <name> <value>[m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--type=<type>] [--fixed-value] --replace-all <name> <value> [<value-pattern>][m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--type=<type>] [--show-origin] [--show-scope] [-z|--null] [--fixed-value] --g[m [4m[24m[4m[24met <name> [<value-pattern>][m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--type=<type>] [--show-origin] [--show-scope] [-z|--null] [--fixed-value] --g[m [4m[24m[4m[24met-all <name> [<value-pattern>][m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--type=<type>] [--show-origin] [--show-scope] [-z|--null] [--fixed-value] [--[m [4m[24m[4m[24mname-only] --get-regexp <name-regex> [<value-pattern>][m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--type=<type>] [-z|--null] --get-urlmatch <name> <URL>[m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--fixed-value] --unset <name> [<value-pattern>][m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--fixed-value] --unset-all <name> [<value-pattern>][m
+       [4mgit[24m [4mconfig[24m [<file-option>] --rename-section <old-name> <new-name>[m
+       [4mgit[24m [4mconfig[24m [<file-option>] --remove-section <name>[m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--show-origin] [--show-scope] [-z|--null] [--name-only] -l | --list[m
+       [4mgit[24m [4mconfig[24m [<file-option>] --get-color <name> [<default>][m
+       [4mgit[24m [4mconfig[24m [<file-option>] --get-colorbool <name> [<stdout-is-tty>][m
+       [4mgit[24m [4mconfig[24m [<file-option>] -e | --edit[m
+[m
+[1mDESCRIPTION[0m[m
+[7m Manual page git-config(1) line 1 (press h for help or q to quit)[27m[K[K       You can query/set/replace/unset options with this command. The name is actually the section and the[m
+       key separated by a dot, and the value will be escaped.[m
+[m
+       Multiple lines can be added to an option by using the [1m--add [22moption. If you want to update or unset an[m
+       option which can occur on multiple lines, a [1mvalue-pattern [22m(which is an extended regular expression,[m
+       unless the [1m--fixed-value [22moption is given) needs to be given. Only the existing values that match the[m
+       pattern are updated or unset. If you want to handle the lines that do [1mnot [22mmatch the pattern, just[m
+       prepend a single exclamation mark in front (see also the section called “EXAMPLES”), but note that[m
+       this only works when the [1m--fixed-value [22moption is not in use.[m
+[m
+       The [1m--type=<type> [22moption instructs [4mgit[24m [4mconfig[24m to ensure that incoming and outgoing values are[m
+       canonicalize-able under the given <type>. If no [1m--type=<type> [22mis given, no canonicalization will be[m
+       performed. Callers may unset an existing [1m--type [22mspecifier with [1m--no-type[22m.[m
+[m
+       When reading, the values are read from the system, global and repository local configuration files by[m
+       default, and options [1m--system[22m, [1m--global[22m, [1m--local[22m, [1m--worktree [22mand [1m--file <filename> [22mcan be used to tell[m
+       the command to read from only that location (see the section called “FILES”).[m
+[m
+       When writing, the new value is written to the repository local configuration file by default, and[m
+       options [1m--system[22m, [1m--global[22m, [1m--worktree[22m, [1m--file <filename> [22mcan be used to tell the command to write to[m
+       that location (you can say [1m--local [22mbut that is the default).[m
+[m
+       This command will fail with non-zero status upon error. Some exit codes are:[m
+[m
+       •   The section or key is invalid (ret=1),[m
+[m
+       •   no section or name was provided (ret=2),[m
+[7m Manual page git-config(1) line 24 (press h for help or q to quit)[27m[K[K[m
+       •   the config file is invalid (ret=3),[m
+[m
+       •   the config file cannot be written (ret=4),[m
+[m
+       •   you try to unset an option which does not exist (ret=5),[m
+[m
+       •   you try to unset/set an option for which multiple lines match (ret=5), or[m
+[m
+       •   you try to use an invalid regexp (ret=6).[m
+[m
+       On success, the command returns the exit code 0.[m
+[m
+       A list of all available configuration variables can be obtained using the [1mgit help --config [22mcommand.[m
+[m
+[1mOPTIONS[0m[m
+       --replace-all[m
+           Default behavior is to replace at most one line. This replaces all lines matching the key (and[m
+           optionally the [1mvalue-pattern[22m).[m
+[m
+       --add[m
+           Adds a new line to the option without altering any existing values. This is the same as providing[m
+           [4m^$[24m as the [1mvalue-pattern [22min [1m--replace-all[22m.[m
+[m
+       --get[m
+           Get the value for a given key (optionally filtered by a regex matching the value). Returns error[m
+           code 1 if the key was not found and the last value if multiple key values were found.[m
+[7m Manual page git-config(1) line 51 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;rakes
